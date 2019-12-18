@@ -1,0 +1,28 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+	<script type="text/javascript">
+		var $ = function(id) {
+			return document.getElementById(id);
+		}
+		function home_click() {
+			window.location.assign("index.html")
+		}
+		window.onload = function () {
+			$("home").onclick = home_click;
+		}
+	</script>
+</head>
+<body>
+<div id="container">
+<form action="pm2.html" method="GET">
+<p><input type="button" value="Home" onclick=" window.location='index.htm' " id="home"></p>
+<p><input type="button" value="Back" onClick="history.back()"></p>
+<p>Enter Fathoms <br />
+   <input type="text" id="1" name="1">
+</p>
+ <p>  <input type="submit" value="Send" name="submit" id="submit"></p>
+</form>
+</div>
+</body>
+</html>

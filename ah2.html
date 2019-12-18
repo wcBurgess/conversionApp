@@ -1,0 +1,43 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<script type="text/javascript">
+var $ = function(id) {
+	return document.getElementById(id);
+}
+function home_click() {
+    window.location.assign("index.html")
+}
+window.onload = function () {
+	$("home").onclick = home_click;
+}
+</script>
+</head>
+
+<body>
+<div id="container">
+<form>
+	<p><input type="button" value="Home" onclick=" window.location='index.htm' " id="home"></p>
+	<p><input type="button" value="Back" onClick="history.back()"></p>
+<p id="myOutput"></p>
+<script language="JavaScript">
+  function processForm()
+  {
+    var myURLstring1 = location.search.substring(1).split("&");
+    var num1 = myURLstring1[0].slice(2);
+	var num1 = parseFloat(num1);
+	
+	var result =(num1*0.4046856);
+	var result = result.toFixed(2);
+
+	document.getElementById("myOutput").innerHTML=num1+" acres covert to: "+result+" hectars."; 
+  }
+  processForm();
+  
+</script>
+<p id="myOutput"></p>
+</form>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<script type="text/javascript">
+var $ = function(id) {
+	return document.getElementById(id);
+}
+function toKilometers_click() {
+    window.location.assign("mk.html")
+}
+
+function toHectars_click() {
+    window.location.assign("ah.html")
+}
+
+function toMeters_click() {
+    window.location.assign("pm.html")
+}
+
+function toCentimeters_click() {
+    window.location.assign("ic.html")
+	
+}
+
+window.onload = function () {
+	$("toKilometers").onclick = toKilometers_click;
+	$("toHectars").onclick = toHectars_click;
+	$("toMeters").onclick = toMeters_click;
+	$("toCentimeters").onclick = toCentimeters_click;
+}
+</script>
+</head>
+<body>
+<div id="container">
+
+<p><input type="button" id="toKilometers" value="Sq Miles &DoubleRightArrow; Sq Kilometers"/></p>
+<p><input type="button" id="toHectars" value="Acres &DoubleRightArrow; Hectars"/></p>
+<p><input type="button" id="toMeters" value="Fathoms &DoubleRightArrow; Meters"  /></p>
+<p><input type="button" id="toCentimeters" value="Inches &DoubleRightArrow; Centimeters" /></p>
+</div>
+</body>
+</html>
